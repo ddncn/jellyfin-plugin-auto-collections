@@ -477,7 +477,11 @@ namespace Jellyfin.Plugin.AutoCollections.Configuration
                     position++;
                     continue;
                 }
-
+/*
+at lines 486 and 492
+input: TAG “christmas” through IOS interface breaks with: invalid tag at char 4
+check for quote symbols: “” to replace them with standard quote "
+*/
                 // Check for string literals
                 if (expression[position] == '"')
                 {
